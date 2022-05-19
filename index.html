@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- my style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="bg-primary py-3">
+        <div class="container">
+            
+            <h2 class="text-center pb-5">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+            
+            <div class="section-price-calculation text-center bg-light rounded-3 mb-4 pb-3">   
+                <div class="row justify-content-center gy-4">
+                    <div class="col col-3">
+                        <label for="NomeCognome">Nome e Cognome</label>
+                        <input type="text" placeholder="Nome e Cognome" id="NomeCognome">
+                    </div>
+                    <div class="col col-3">
+                        <label for="kilometri">Nome e Cognome</label>
+                        <input type="number" placeholder="Km da percorrere" id="kilometri">
+                    </div>
+                    <div class="col col-3">
+                        <label class="d-block" for="eta">Fascia età</label>
+                        <select name="" id="eta">
+                            <option value="min">Minorenne</option>
+                            <option value="magg">Maggiorenne</option>
+                            <option value="ov65">=ver 65</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <button type="button">Genera</button>
+                        <button type="button">Annulla</button>
+                    </div>
+                </div>
+            </div>
+            <h2 class="text-center">IL TUO BIGLIETTO</h2>
+            <div class="section-ticket bg-light mb-3 p-3">
+                <h5>DETTAGLIO PASSEGERI</h5>
+                <div class="row">
+                    <div class="col">
+                        
+                        <div class="bg-secondary h-100">
+                            <h5>NOME PASSEGERO</h4>
+                            <h6 class="name-passenger"></h5>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <div class="pb-5">Offerta</div>
+                            <div>Biglietto Standard</div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <div class="pb-5">Carrozza</div>
+                            <div class="carriage"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <div class="pb-5">Codice CP</div>
+                            <div class="cp-code"></div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <div class="pb-5">Costo Biglietto</div>
+                            <div class="price"></div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
