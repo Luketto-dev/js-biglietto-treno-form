@@ -14,39 +14,40 @@
     <main class="bg-primary py-3">
         <div class="container">
             
-            <h2 class="text-center pb-5">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+            <h2 class="text-center text-white pb-5">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
             
-            <div class="section-price-calculation text-center bg-light rounded-3 mb-4 pb-3">   
+            <div class="text-center bg-light rounded-3 mb-4 pb-3 text-primary">
+                <div class="error text-danger text-decoration-underline fs-5"></div>   
                 <div class="row justify-content-center gy-4">
                     <div class="col col-3">
-                        <label for="NomeCognome">Nome e Cognome</label>
-                        <input type="text" placeholder="Nome e Cognome" id="NomeCognome">
+                        <label for="nome-cognome">Nome e Cognome</label>
+                        <input class="border-primary rounded-2" type="text" placeholder="Nome e Cognome" id="nome-cognome">
                     </div>
                     <div class="col col-3">
-                        <label for="kilometri">Nome e Cognome</label>
-                        <input type="number" placeholder="Km da percorrere" id="kilometri">
+                        <label for="kilometri">Km da percorrere</label>
+                        <input class="border-primary rounded-2"  type="number" placeholder="Km da percorrere" id="kilometri">
                     </div>
                     <div class="col col-3">
                         <label class="d-block" for="eta">Fascia età</label>
-                        <select name="" id="eta">
+                        <select class="border-primary rounded-2"  name="" id="eta">
                             <option value="min">Minorenne</option>
                             <option value="magg">Maggiorenne</option>
-                            <option value="ov65">=ver 65</option>
+                            <option value="over65">over 65</option>
                         </select>
                     </div>
                     <div class="col-12">
-                        <button type="button">Genera</button>
-                        <button type="button">Annulla</button>
+                        <button class="text-primary" type="button" id="submit">Genera</button>
+                        <button class="text-primary" type="button" id="cancel">Annulla</button>
                     </div>
                 </div>
             </div>
-            <h2 class="text-center">IL TUO BIGLIETTO</h2>
-            <div class="section-ticket bg-light mb-3 p-3">
+            <h2 class="text-center text-white">IL TUO BIGLIETTO</h2>
+            <div class="section-ticket bg-light mb-3 p-3 d-none">
                 <h5>DETTAGLIO PASSEGERI</h5>
                 <div class="row">
                     <div class="col">
                         
-                        <div class="bg-secondary h-100">
+                        <div class="bg-secondary h-100 px-4">
                             <h5>NOME PASSEGERO</h4>
                             <h6 class="name-passenger"></h5>
                         </div>
@@ -54,7 +55,7 @@
                     <div class="col">
                         <div>
                             <div class="pb-5">Offerta</div>
-                            <div>Biglietto Standard</div>
+                            <div class="ticket-type"></div>
                         </div>
                     </div>
                     <div class="col">
