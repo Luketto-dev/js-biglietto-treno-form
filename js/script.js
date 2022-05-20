@@ -16,7 +16,6 @@ let divSectionTicket = document.querySelector(".section-ticket");
 
 buttonSubmit.addEventListener("click", function(){
 
-    console.log("sono nell'evento")
     let datiValidi = true;
 
     // controllo se i kilometri sono < 1 oppure > di 499
@@ -47,7 +46,6 @@ buttonSubmit.addEventListener("click", function(){
             offering = "biglietto over-65"
         }
 
-        divSectionTicket.classList.add("d-block");
         divSectionTicket.classList.remove("d-none");
 
         prezzoTotale -= prezzoTotale * scontoApplicato;
@@ -74,7 +72,7 @@ buttonSubmit.addEventListener("click", function(){
         console.log(namePassenger)
 
         nomeCognome.value = "";
-        kilometri.value = "";
+        kilometri.value = null;
 
     }else{
 
@@ -84,9 +82,8 @@ buttonSubmit.addEventListener("click", function(){
 
 
 buttoncancel.addEventListener("click", function(){
-    if (divSectionTicket.classList.contains("d-block")) {
-        divSectionTicket.classList.add("d-none");
-    }
-
+    
+    divSectionTicket.classList.add("d-none");
     error.innerHTML = "";
+
 })
